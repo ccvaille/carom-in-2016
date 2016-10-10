@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+.motor-container {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 74.5px;
+    height: 40px;
+}
+
+.a1 {
+    animation: a_motor_man .5s linear infinite;
+}
+
+.motor-boy,
+.motor-girl,
+.motor-mo {
+    background: url(moto.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    position: absolute;
+}
+
+.motor-boy {
+    background-position: 0 0;
+    height: 34px;
+    width: 16px;
+    top: -20px;
+    left: 13px;
+    z-index: 4;
+}
+
+.motor-girl {
+    background-position: 0 -37px;
+    height: 35px;
+    width: 15px;
+    top: -22px;
+    left: 2px;
+    z-index: 5;
+}
+
+.motor-mo {
+    background-position: 0 -75px;
+    height: 20px;
+    width: 37px;
+    z-index: 3;
+}
+
+.motor-wheel1,
+.motor-wheel2 {
+    height: 15px;
+    width: 15px;
+    top: 13px;
+    z-index: -2;
+    background: url(ball.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.motor-wheel1 {
+    left: 27px;
+    animation: rotate 1 s linear infinite;
+}
+
+.motor-wheel2 {
+    left: 0;
+    animation: rotate 1 s linear infinite;
+}
+
+.smoke_1 {
+    animation: a_smoke 1 s .1s linear infinite;
+}
+
+.smoke-2 {
+    animation: a_smoke 1s .5s linear infinite;
+}
+
+.motor-shadow,
+.smoke {
+    display: block;
+    height: 8px;
+    position: absolute;
+}
+
+.motor-shadow {
+    width: 40px;
+    bottom: 5px;
+    left: 2px;
+    background: #000;
+    border-top-left-radius: 40px 8px;
+    border-top-right-radius: 40px 8px;
+    border-bottom-right-radius: 40px 8px;
+    border-bottom-left-radius: 40px 8px;
+    opacity: .3;
+    z-index: 1;
+    animation: a_motor_hook 1s 0s linear infinite alternate;
+}
+
+.smoke {
+    width: 8px;
+    background: #9A9A9A;
+    border-radius: 8px;
+    left: -10px;
+    top: 18px;
+    opacity: 0;
+}
+
+@keyframes a_smoke {
+    0% {
+        transform: scale(.5) translate(0, 0);
+        opacity: 0
+    }
+    25% {
+        transform: translate(-6px, 0);
+        opacity: 1
+    }
+    50% {
+        transform: translate(-12px, -4px);
+        opacity: 1
+    }
+    75% {
+        transform: translate(-18px, -12px);
+        opacity: .5
+    }
+    100% {
+        transform: scale(1) translate(-22px, -16px);
+        opacity: 0
+    }
+}
+
+@keyframes a_motor_hook {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.1, 1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes a_motor_man {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1, 1);
+    }
+    25% {
+        transform: translate(0, 1px) scale(1.02, .99);
+    }
+    50% {
+        transform: translate(0, -2px) scale(.97, 1.03);
+    }
+    75% {
+        transform: translate(0, 0) scale(1.01, 1.01);
+    }
+}
