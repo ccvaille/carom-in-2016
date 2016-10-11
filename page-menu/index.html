@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>page-menu</title>
+    <style>
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    .btn-icon {
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        touch-action: manipulation;
+        min-height: 30px;
+        min-width: 30px;
+        padding: 9px;
+        border: 0;
+        background: none;
+        font-size: 11px;
+        font-style: italic;
+    }
+    
+    .btn-icon-round {
+        line-height: 0;
+    }
+    
+    .page-menubtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
+    }
+    
+    .btn-icon-round::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #000;
+        border-radius: 100%;
+        background-color: transparent;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.15s ease 0.3s;
+    }
+    
+    .page-menubtn .menu-bar {
+        width: 10px;
+        height: 2px;
+        background: #000;
+        margin: 0 auto 3px;
+        transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .page-menubtn .menu-bar::before,
+    .page-menubtn .menu-bar::after {
+        content: '';
+        position: absolute;
+        background: #000;
+        height: 2px;
+        width: 2px;
+    }
+    
+    .page-menubtn .menu-bar::before {
+        left: 10px;
+    }
+    
+    .page-menubtn .menu-bar::after {
+        right: 10px;
+    }
+    
+    .page-menubtn:hover .menu-bar {
+        width: 2px;
+        transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    </style>
+</head>
+
+<body>
+    <button class="btn-icon btn-icon-round  page-menubtn" type="button" style="opacity: 1;">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+    </button>
+</body>
+
+</html>
