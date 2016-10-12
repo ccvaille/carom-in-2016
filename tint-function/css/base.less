@@ -1,0 +1,64 @@
+//Theme style
+@primary-color : #2580e6;
+@ghost-color : #d4deee;
+@border-radius-base : 3px;
+@font-size-base : 12px;
+@line-height-base : 1.5;
+
+li {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: transparent;
+}
+
+.button-color(@color;
+@background;
+@border) {
+    color: @color;
+    background: @background;
+    border: 1px solid @border;
+    border-radius: @border-radius-base;
+    font-size: @font-size-base;
+    line-height: @line-height-base;
+    text-align: center;
+}
+
+.primary {
+    li {
+        .button-color(#fff;
+        @primary-color;
+        @primary-color);
+        &:hover,
+        &.hover {
+            .button-color(#fff;
+            tint(@primary-color, 20%);
+            tint(@primary-color, 20%));
+        }
+        &:active,
+        &.active {
+            .button-color(fadeout(#fff, 20%);
+            shade(@primary-color, 5%);
+            shade(@primary-color, 5%));
+        }
+    }
+}
+.ghost {
+  li{
+    .button-color(#303642;
+        #fff;
+        @ghost-color);
+        &:hover,
+        &.hover {
+            .button-color(#303642;
+            #fff;
+            #96a0b4);
+        }
+        &:active,
+        &.active {
+            .button-color(fadeout(#303642, 20%);
+            #edf2fa;
+            #96a0b4);
+        }
+  }
+}
