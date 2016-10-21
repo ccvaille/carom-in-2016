@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>easing-bounce</title>
+    <style>
+    .ball {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #966a6a;
+        animation: bounce 3s infinite;
+    }
+    
+    @keyframes bounce {
+        60%,
+        80%,
+        100% {
+            transform: translateY(350px);
+        }
+        70% {
+            transform: translateY(250px);
+        }
+        90% {
+            transform: translateY(300px);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="ball"></div>
+</body>
+
+</html>
