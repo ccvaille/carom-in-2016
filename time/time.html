@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>time</title>
+
+</head>
+<body>
+	<!-- 写一个计时器页面，拥有开始和停止按钮。按下开始按钮后开始计时，按下停止按钮后输出中间间隔的时间。 -->
+
+	<input type="button" value="start" id="start">
+	<input type="button" value="end" id="end">
+	<input type="text" value="0" id="text">
+
+	<script>		
+		var second = 0; 
+		var t;
+		function timestart(){
+			document.getElementById("text").value = second;
+			second++;
+			t=setTimeout("timestart()",100);
+		}
+		function timeout(){
+			clearTimeout(t);
+		}
+		document.getElementById("start").onclick = timestart;
+		document.getElementById("end").onclick = timeout;
+			
+	</script>
+</body>
+</html>
+
