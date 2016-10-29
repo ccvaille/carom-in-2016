@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>third-数据绑定语法</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="a">
+        <p>{{a}}</p>
+        <p>{{a + 1}}</p>
+        <p>{{{html}}}</p>
+        <img src="https://cn.vuejs.org/images/lifecycle.png" alt="" width="700">
+    </div>
+	<script>
+     var data ={ a:10,html:"<html><p>输出p标签</p><a href='http://www.coolfe.com' target='_blank'>this is a link to my bolg</a></html>"};
+     var vm =new Vue({
+        el:"#a",
+        data:data,
+        //生命周期
+        created:function(){
+            console.log("this is " + this.a)
+        }
+     })
+     vm.a = 2;
+    </script>
+</body>
+
+</html>
