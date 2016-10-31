@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css-variable</title>
+	<style>
+	/*http://www.w3cplus.com/css3/css-properties-in-depth.html*/
+		/*currentColor*/
+		:root {
+			color: blue;
+		}
+		div {
+			border: 1px solid currentColor;
+			color: red;
+		}
+		/*--variable-name: variable-value;*/
+		:root {
+			--primary-color: blue;
+			--border-radius: 3px;
+			--color: #fff;
+		}
+		p {
+			color: var(--color);
+			background: var(--primary-color);
+			width: var(--width,200px);
+		}
+	</style>
+</head>
+<body>
+	<div>This is a test page.</div>
+	<p>This is to test --variable-name: variable-value</p>
+</body>
+</html>
