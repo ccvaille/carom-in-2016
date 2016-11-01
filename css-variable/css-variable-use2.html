@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css-variable-use2</title>
+    <style>
+    :root {
+        --font-size: 14px;
+    }
+    
+    .variables {
+        font-size: var(--font-size);
+    }
+    
+    .variables-focus {
+        /*doesn't work*/
+        --font-size-focus: var(--font-size)*2;
+        font-size: var(--font-size-focus);
+        /*doesn't work*/
+        /*good*/
+        font-size: calc(var(--font-size)*2);
+        /*good*/
+    }
+    </style>
+</head>
+
+<body>
+    <div class="variables">
+        variables(14px)
+    </div>
+    <div class="variables-focus">
+        variables-focus(28px)
+    </div>
+</body>
+
+</html>
