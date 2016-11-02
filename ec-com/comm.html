@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>comm</title>
+    <link rel="stylesheet" href="comm.css">
+    <style>
+    p {
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <p>
+        <a href="javascript:;" class="ec-btn ec-btn-xs ec-btn-cancel">导出数据</a>
+        <a href="javascript:;" class="ec-btn ">导出数据</a>
+    </p>
+    <p>
+        <label class="ec-checkbox ">
+            <input type="checkbox" checked /><span></span>已阅读并同意</label>
+    </p>
+    <p>
+        <label class="ec-radio ">
+            <input type="radio" checked /><span></span>已阅读并同意</label>
+    </p>
+    <p>
+        <div class="pop-show"><img src="img/pop-icon.png" alt="" class="pop-icon">
+            <div class="ec-tooltip getinto-popover">
+                <div class="bottom">
+                    <span><i class="tip-one"></i><i class="tip-two"></i>导入客户库时，用户填写的内容会成为您所关联的客户资料字段</span>
+                </div>
+            </div>
+        </div>
+    </p>
+    <p>
+        <input type="text" class="ec-input" placeholder="请输入开户行" />
+    </p>
+    <p>
+        <div class="ec-dropdown active">
+            <input type="text" value="请选择" readonly="readonly">
+            <img src="img/down-icon.png" alt="" class="down-icon">
+            <img src="img/default-down-icon.png" alt="" class="default-down-icon">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div class="ec-dropdown disabled">
+            <input type="text" value="请选择" readonly="readonly">
+            <img src="img/down-icon.png" alt="" class="down-icon">
+            <img src="img/default-down-icon.png" alt="" class="default-down-icon">
+        </div>
+    </p>
+    <p>
+        <div class="ec-modal">
+            <div class="ec-popuper ">
+                <h4>开通微表单账户 <i class="ec-close">&#10005</i></h4>
+                <div class="ec-modal-container">
+                    <div class="ec-modal-body">
+                        <div class="ec-modal-title">请提供您用于收款的公司账户资料</div>
+                        <ul class="ec-modal-content">
+                            xxxxxxxxxxxx
+                        </ul>
+                    </div>
+                    <div class="ec-modal-footer">
+                        <div class="ec-btn-group">
+                            <a href="javascript:;" class="ec-btn ec-btn-primary" id="confirm-open">开通</a>
+                            <a href="javascript:;" class="ec-btn ec-btn-cancel" id="cancel-open">取消</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+</body>
+
+</html>
