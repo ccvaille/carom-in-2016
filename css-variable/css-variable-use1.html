@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css-variable-use1</title>
+    <style>
+    /*global-variable*/
+    :root {
+        --global-var: "global";
+    }
+    /*inline-variable*/
+    .inline {
+    	--inline-font-size:12px;
+    	font-size:var(--inline-font-size);
+    }
+    .inline-block {
+    	--inline-block-font-size:14px;
+    	font-size: var(--inline-block-font-size);
+    	--inline-block-color:red;
+    	color: var(--inline-block-color);
+    }
+    .inline-block:hover {
+    	color: blue;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="inline">
+        inline-use(12px)
+    </div>
+    <div class="inline-block">
+    	inline-block-use(14px)
+    </div>
+</body>
+
+</html>
