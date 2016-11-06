@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8</title>
+	<script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+<body>
+	<div id="app"></div>
+	<!-- this.props 表示那些一旦定义，就不再改变的特性
+	this.state 
+	是会随着用户互动而产生变化的特性 -->
+	<script type="text/babel">
+		var LikeButton = React.createClass({
+			getInitialState: function(){
+				return {liked: false};
+			},
+			handleClick:function(event) {
+				this.setState({liked:!this.state.liked});
+			},
+			render:function(){
+				var text = this.state.liked ? 'like' : 'haven\'t liked';
+				return (
+					<p onClick={this.handleClick}>
+						you {text} this.click to toggle.
+					</p>
+				);
+			}
+		});
+		ReactDOM.render(
+			<LikeButton />,
+			document.getElementById("app")
+		);
+	</script>
+</body>
+</html>
