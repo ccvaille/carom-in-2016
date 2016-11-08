@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10</title>
+	<script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+    <style>
+			.app {
+			     padding: 50px;
+			     background-color: #EEE;
+			   }
+	   .app h1 {
+	     font-size: 144px;
+	     font-family: sans-serif;
+	     color: #0080a8;
+	   }
+    </style>
+</head>
+<body>
+	<div class="app"></div>
+	<script type="text/babel">
+	var Helloworld = React.createClass({
+			render:function(){
+				return (
+					<p>This is a {this.props.text}</p>
+					
+				);
+			}
+	});
+	var Childentest = React.createClass({
+			render:function(){
+				return (
+					<div>
+						<button type="{this.props.type}">{this.props.children}</button>
+					</div>
+				);
+			}
+	});
+		ReactDOM.render(
+			<div>
+				<Helloworld text="a"/>
+				<Helloworld text="b"/>
+				<Helloworld text="c"/>
+				<Childentest type="submit">a button</Childentest>
+			</div>,
+			document.querySelector(".app")
+		)
+	</script>
+</body>
+</html>
