@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>11</title>
-	<script src="build/react.js"></script>
+    <meta charset="UTF-8">
+    <title>12</title>
+    <script src="build/react.js"></script>
     <script src="build/react-dom.js"></script>
     <script src="build/browser.min.js"></script>
-    <style>
-			.i {
-				padding: 10px;
-			  margin: 10px;
-			  background-color: #ffde00;
-			  color: #333;
-			  display: inline-block;
-			  font-family: Arial;
-			  font-size: 32px;
-			  text-align: center;
-			  font-style: normal;
-			}
-    </style>
 </head>
+
 <body>
-<!-- 单个单词的 CSS 属性（比如 padding, margin, color）保持不变。
-带有短横线的多个单词的 CSS 属性（比如font-family, border-radius）变成去掉横线，并且第二个单词的首字母大写的驼峰规则命名的单词。 例如，background-color 变成 backgroundColor, font-family 变成 fontFamily, border-radius 变成 borderRadius -->
-	<div id="app"></div>
-	<script type="text/babel">
-		var Addclass = React.createClass({
-			render:function(){
-				var iStyle = {
-					padding: 10,
-					margin: 10,
-					backgroundColor: this.props.bg,
-					color: "#333",
-					display: "inline-block",
-					fontFamily: "Arial",
-					fontSize: "32",
-					textAlign: "center",
-					fontStyle: "normal"
-				};
-				return (
-					<div style={iStyle}>{this.props.children}</div>
-				);
-			}
-		});
+		<div class="app"></div>
+		<script type="text/babel">
+    		var Square = React.createClass({
+    			render:function() {
+                    var squareStyle = {
+                        height: 150,
+                        backgroundColor: this.props.bg
+                    };
+    				return(
+    					<div style={squareStyle}></div>
+    				);
+    			}
+    		});
+
+    		var Label = React.createClass({
+    			render:function(){
+                    var labelStyle = {
+                        fontFamily: "Arial",
+                        fontWeight: "bold",
+                        padding: 13,
+                        margin: 0
+                    };
+    				return (
+                        <div style={labelStyle}>{this.props.bg}</div>
+    				);
+    			}
+    		});
+
+    		var Card = React.createClass({
+    			render:function() {
+    			var cardStyle = {
+    					height: 200,
+    					width: 150,
+    					padding: 0,
+    					backgroundColor: "#fff",
+                         WebkitFilter: "drop-shadow(0px 0px 5px #666)",
+                        filter: "drop-shadow(0px 0px 5px #666)"
+    				};
+    				return(
+    					<div style={cardStyle}>
+                            <Square bg={this.props.bg}/>
+                            <Label bg={this.props.bg}/>
+                        </div>
+    				);
+    			}
+    		});
+
 			ReactDOM.render(
 				<div>
-					<Addclass bg="#aaa"><i>C</i></Addclass>
-					<Addclass bg="#eee"><i>O</i></Addclass>
-					<Addclass bg="#e7d"><i>O</i></Addclass>
-					<Addclass bg="#789"><i>L</i></Addclass>
-					<Addclass bg="#a9a"><i>F</i></Addclass>
-					<Addclass bg="#a7a"><i>E</i></Addclass>
+					<Card bg="#456726"/>
 				</div>,
-				document.querySelector("#app")
+				document.querySelector(".app")
 			);
-	</script>
-
+		</script>
 </body>
+
 </html>
