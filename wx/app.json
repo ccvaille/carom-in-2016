@@ -1,0 +1,12 @@
+{
+	"pages": [
+	"views/index/index"
+	],
+	"window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "COOLFE",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  }
+}
