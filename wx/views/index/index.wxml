@@ -1,0 +1,8 @@
+<view class="douban">
+	<text class="hello">{{message}},这是最近上映的电影：</text>
+	<view class="new" wx:for="{{list}}">
+		<image src="{{item.images.small}}"></image>
+		<text>{{item.title}}</text>
+	</view>
+	<text>The end</text>
+</view>
