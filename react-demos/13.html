@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>13</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+
+<body>
+		<div class="app"></div>
+		<script type="text/babel">
+        {/* 这是注释 */}
+        // 在 JSX 中，return 或者 render 的东西不能由多个根元素组成
+        //扩展运算符
+    		var Display = React.createClass({
+              render: function() {
+                return(
+                  <div>
+                    <p>{this.props.color}</p>
+                    <p>{this.props.num}</p>
+                    <p>{this.props.size}</p>
+                  </div>
+                );
+              }
+            });
+
+            var Label = React.createClass({
+              render: function() {
+                return (
+                  <Display {...this.props}/>
+                );
+              }
+            });
+
+            var Shirt = React.createClass({
+              render: function() {
+                return (
+                  <div>
+                    <Label {...this.props}/>
+                  </div>
+                );
+              }
+            });
+
+            ReactDOM.render(
+              <div>
+                <Shirt color="steelblue" num="3.14" size="medium" />
+              </div>,
+              document.querySelector(".app")
+            );
+		</script>
+</body>
+
+</html>
