@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>15</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+
+<body>
+		<div class="app"></div>
+		<script type="text/babel">
+        // use key
+        // Warning: Each child in an array or iterator should have a unique "key" prop. Check the top-level render call using .
+            var Circle = React.createClass({
+                render:function() {
+                    var circleStyle = {
+                        width: 100,
+                        height: 100,
+                        padding: 10,
+                        margin: 20,
+                        display: "inline-block",
+                        borderRadius: "50%",
+                        backgroundColor: this.props.bg
+                    };
+                    
+                    return (<div style={circleStyle}></div>);               
+                }
+            });
+
+            var thisdiv = document.querySelector(".app");
+
+            var colors = ["#393E41", "#E94F37", "#1C89BF", "#A1D363",
+                                  "#85FFC7", "#297373", "#FF8552", "#A40E4C"];
+            var renderDate = [];
+
+            for(var i = 0; i< colors.length; i++) {
+                var color  = colors[i];
+                renderDate.push(<Circle key={i + color} bg={color}/>);
+            }
+
+            ReactDOM.render(
+                <div>
+                    {renderDate}
+                </div>,
+               thisdiv
+            )
+		</script>
+</body>
+
+</html>
