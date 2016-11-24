@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>17</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+
+<body>
+		<div class="app"></div>
+		<script type="text/babel">
+		// 当组件要被销毁时，要移除事件监听器
+        var Something = React.createClass({
+        	handleMyEvent: function(e) {
+						console.log(this)
+        	},
+        	componentDidMount: function() {
+						window.addEventListener("click",this.handleMyEvent);
+        	},
+        	componentWillUNmount: function() {
+						window.removeEventListener("click", this.handleMyEvent);
+        	},
+     //    	function doSomething(e) {
+					//   console.log(this); 
+					// },
+					// var foo = document.querySelector(".app");
+					// foo.addEventListener("click", doSomething, false);
+        	render:function() {
+        		return (
+        			<div>Hello!</div>
+        			);
+        	}
+        });
+
+        ReactDOM.render(
+					<div>
+					<Something/>,
+					document.querySelector(".app")
+					</div>
+        )
+		</script>
+</body>
+
+</html>

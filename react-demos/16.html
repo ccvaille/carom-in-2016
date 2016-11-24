@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>16</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+
+<body>
+		<div class="app"></div>
+		<script type="text/babel">
+        var Counter = React.createClass({
+        	render:function() {
+        		var textStyle = {
+        			fontSize : 72,
+        			color: "#333",
+        			fontWeight: "bold"
+        		};
+        	 	return (
+							<div style={textStyle}>{this.props.display}</div>
+        	 	);
+        	}
+        });
+
+        var CounterButton = React.createClass({
+        	render:function(){
+        		var buttonStyle = {
+								fontSzie: "1em",
+								width: 30,
+								height: 30,
+								color: "#333",
+								fontWeight: "bold"
+							};
+        		return (
+        			<button onClick={this.props.clickHandler} style={buttonStyle}>+</button>
+        			)
+        	}
+        });
+
+        var CounterParent = React.createClass({
+        	getInitialState: function(){
+						return {
+							 count: 0
+						};
+        	},
+        	toclick: function(e){
+        		/*按下shilft+10*/
+						var currentCount = this.state.count;
+						if(e.shiftKey) {
+							 currentCount += 10;
+						} else {
+							 currentCount += 1;
+						}
+						this.setState({
+							count: currentCount
+						});
+        	},
+        	render:function() {
+						var backgrondStyle = {
+								padding: 50,
+								background: "#ffc53a",
+								width: 250,
+								height: 100,
+								borderRadius: 10,
+								textAlign: "center"
+							};
+							
+							return (
+								<div style={backgrondStyle}>
+									<Counter display={this.state.count}/>
+									<CounterButton  clickHandler={this.toclick}>+</CounterButton>
+								</div>
+							)
+        	}
+        });
+
+
+
+        ReactDOM.render(
+        		<div>
+							<CounterParent/>
+						</div>,
+							document.querySelector(".app")
+        	);
+		</script>
+</body>
+
+</html>
