@@ -15,32 +15,24 @@
 		// 当组件要被销毁时，要移除事件监听器
         var Something = React.createClass({
         	handleMyEvent: function(e) {
-						console.log(this)
+				console.log(e)
         	},
         	componentDidMount: function() {
-						window.addEventListener("click",this.handleMyEvent);
+				window.addEventListener("click",this.handleMyEvent);
         	},
         	componentWillUNmount: function() {
-						window.removeEventListener("click", this.handleMyEvent);
+				window.removeEventListener("click", this.handleMyEvent);
         	},
-     //    	function doSomething(e) {
-					//   console.log(this); 
-					// },
-					// var foo = document.querySelector(".app");
-					// foo.addEventListener("click", doSomething, false);
         	render:function() {
         		return (
         			<div>Hello!</div>
-        			);
+        		);
         	}
         });
 
         ReactDOM.render(
-					<div>
-					<Something/>,
-					document.querySelector(".app")
-					</div>
-        )
+		  <Something/>, 
+          document.querySelector(".app"))
 		</script>
 </body>
 
