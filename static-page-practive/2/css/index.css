@@ -1,0 +1,149 @@
+/*
+create on 2016-11-28
+ */
+/*reset*/
+* {
+  font: 12px "Microsoft YaHei", "宋体", "Arial Narrow", HELVETICA;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font: 14px Arial, "Microsoft yahei";
+  background: #fff;
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+input[type="text"] {
+  font-family: Arial, "Microsoft YaHei";
+  border: none;
+  height: auto;
+  line-height: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: inline-block;
+  border: 0;
+  vertical-align: middle;
+}
+/*清除文本框后关闭按钮*/
+input::-ms-clear {
+  display: none;
+}
+/*清除密码框后有小眼睛图标*/
+input::-ms-reveal {
+  display: none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+::selection {
+  background: #d88d2c;
+  color: #fff;
+}
+.w1k {
+  width: 1000px;
+  margin: 0 auto;
+}
+/*top*/
+.top {
+  text-align: right;
+}
+.top a {
+  color: #605f5f;
+}
+.top .top-float {
+  zoom: 1;
+}
+.top .top-float:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.top .top-float .top-left {
+  width: 370px;
+  float: left;
+  text-align: left;
+  zoom: 1;
+}
+.top .top-float .top-left:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.top .top-float .top-left img {
+  float: left;
+}
+.top .top-float .top-left .top-text {
+  float: right;
+}
+.top .top-float .top-left .top-text span {
+  display: inline-block;
+}
+.top .top-float .top-left .top-text span:first-child {
+  font-size: 50px;
+  color: #000;
+  border-bottom: 3px solid #000;
+  display: block;
+}
+.top .top-float .top-left .top-text span:last-child {
+  font-size: 28px;
+  color: #5b5b5b;
+}
+.top .top-float .top-right {
+  width: 307px;
+  margin-right: 10px;
+  float: right;
+}
+.top .top-float .top-right .tel {
+  float: left;
+  color: #676767;
+  font-size: 18px;
+  line-height: 65px;
+}
+.top .top-float .top-right .tel-num {
+  float: right;
+  text-align: left;
+}
+.top .top-float .top-right .tel-num span {
+  font-size: 24px;
+}
+.top .top-float .top-right .tel-num span:first-child {
+  color: #676767;
+  display: block;
+}
+.top .top-float .top-right .tel-num span:last-child {
+  color: #fa0000;
+}
