@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+</head>
+
+<body>
+    <script>
+    function zerofill(num) {
+        if (num < 10) {
+            return ' 0' + num;
+        } else {
+            return ' ' + num;
+        }
+    }
+
+    function setTime() {
+        var d = new Date();
+        var Year = d.getFullYear();
+        var Month = d.getMonth() + 1; // return 0-11
+        var D = d.getDate();
+        var Hour = d.getHours();
+        var Minute = d.getMinutes();
+        var Second = d.getSeconds();
+        var setHour = d.getHours(d.setHours(12)); //change
+        document.body.innerHTML = (Year + '年' + zerofill(Month) + '月' + zerofill(D) + '日' + zerofill(setHour) + '时' + zerofill(Minute) + '分' + zerofill(Second) + '秒');
+    }
+
+    window.onload = function() {
+        setTime();
+        setInterval(function() {
+            setTime();
+        }, 1000)
+    }
+    </script>
+</body>
+
+</html>
