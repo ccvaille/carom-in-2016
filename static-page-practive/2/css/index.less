@@ -96,6 +96,17 @@ input::-ms-reveal {
 }
 
 
+/*common*/
+
+.more {
+    float: right;
+    a {
+        color: #d88d2c;
+        line-height: 30px;
+    }
+}
+
+
 /*top*/
 
 .top {
@@ -153,6 +164,98 @@ input::-ms-reveal {
                         color: #fa0000;
                     }
                 }
+            }
+        }
+    }
+}
+
+
+/*nav*/
+
+.nav {}
+
+
+/*banner*/
+
+.banner {
+    margin-bottom: 7px;
+}
+
+
+/*item*/
+
+.item {
+    .clearfix();
+    overflow: hidden;
+    margin-bottom: 10px;
+    .left {
+        float: left;
+        width: 72%;
+        border: 1px solid #d4d3d3;
+        .head {
+            .clearfix();
+            height: 32px;
+            line-height: 30px;
+            border-bottom: 1px solid #3a2100;
+            background: #e8e7e7;
+            padding-right: 10px;
+            .title {
+                float: left;
+                h4 {
+                    padding-left: 10px;
+                    display: inline-block;
+                    color: #d88d2c;
+                    font-size: 24px;
+                    font-weight: normal;
+                    border-bottom: 1px solid #ff031b;
+                    margin-right: 8px;
+                }
+                span {
+                    font-size: 14px;
+                    color: #000000;
+                }
+            }
+        }
+        ul {
+            .clearfix();
+            padding: 10px;
+            li {
+                float: left;
+                color: #444141;
+                width: 33.33%;
+                text-align: center;
+                p {
+                    font-weight: bold;
+                    padding-top: 8px;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .right {
+        float: right;
+        width: 27%;
+        .head {
+            border: 1px solid #d4d3d3;
+            padding-left: 13px;
+            height: 30px;
+            .clearfix();
+            .title {
+                float: left;
+                line-height: 30px;
+            }
+        }
+        .com-info {
+            padding: 5px;
+            border: 1px solid #d4d3d3;
+            border-top: none;
+            img {
+                float: left;
+                margin-right: 6px;
+            }
+            p {
+                line-height: 27px;
             }
         }
     }

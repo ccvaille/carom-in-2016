@@ -75,6 +75,14 @@ input::-ms-reveal {
   width: 1000px;
   margin: 0 auto;
 }
+/*common*/
+.more {
+  float: right;
+}
+.more a {
+  color: #d88d2c;
+  line-height: 30px;
+}
 /*top*/
 .top {
   text-align: right;
@@ -146,4 +154,110 @@ input::-ms-reveal {
 }
 .top .top-float .top-right .tel-num span:last-child {
   color: #fa0000;
+}
+/*nav*/
+/*banner*/
+.banner {
+  margin-bottom: 7px;
+}
+/*item*/
+.item {
+  zoom: 1;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.item:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.item .left {
+  float: left;
+  width: 72%;
+  border: 1px solid #d4d3d3;
+}
+.item .left .head {
+  zoom: 1;
+  height: 32px;
+  line-height: 30px;
+  border-bottom: 1px solid #3a2100;
+  background: #e8e7e7;
+  padding-right: 10px;
+}
+.item .left .head:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.item .left .head .title {
+  float: left;
+}
+.item .left .head .title h4 {
+  padding-left: 10px;
+  display: inline-block;
+  color: #d88d2c;
+  font-size: 24px;
+  font-weight: normal;
+  border-bottom: 1px solid #ff031b;
+  margin-right: 8px;
+}
+.item .left .head .title span {
+  font-size: 14px;
+  color: #000000;
+}
+.item .left ul {
+  zoom: 1;
+  padding: 10px;
+}
+.item .left ul:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.item .left ul li {
+  float: left;
+  color: #444141;
+  width: 33.33%;
+  text-align: center;
+}
+.item .left ul li p {
+  font-weight: bold;
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.item .right {
+  float: right;
+  width: 27%;
+}
+.item .right .head {
+  border: 1px solid #d4d3d3;
+  padding-left: 13px;
+  height: 30px;
+  zoom: 1;
+}
+.item .right .head:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.item .right .head .title {
+  float: left;
+  line-height: 30px;
+}
+.item .right .com-info {
+  padding: 5px;
+  border: 1px solid #d4d3d3;
+  border-top: none;
+}
+.item .right .com-info img {
+  float: left;
+  margin-right: 6px;
+}
+.item .right .com-info p {
+  line-height: 27px;
 }
