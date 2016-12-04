@@ -1,0 +1,98 @@
+/*
+create on 2016-12-04
+ */
+
+
+/*reset*/
+
+* {
+    font: 12px "Microsoft YaHei", "宋体", "Arial Narrow", HELVETICA;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font: 14px Arial, "Microsoft yahei";
+    background: #fff;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+input[type="text"] {
+    font-family: Arial, "Microsoft YaHei";
+    border: none;
+    height: auto;
+    line-height: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: inline-block;
+    border: 0;
+    vertical-align: middle;
+}
+
+
+/*清除文本框后关闭按钮*/
+
+input::-ms-clear {
+    display: none;
+}
+
+
+/*清除密码框后有小眼睛图标*/
+
+input::-ms-reveal {
+    display: none;
+}
+
+.clearfix {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+::selection {
+    background: #d88d2c;
+    color: #fff;
+}
+
+.w {
+    width: 980px;
+    margin: 0 auto;
+}
+
+
