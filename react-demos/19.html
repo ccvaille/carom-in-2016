@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>19</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+    <script src="build/react-router.min.js"></script>
+    <style>	
+		body {
+		  background-color: #FFCC00;
+		  padding: 20px;
+		  margin: 0;
+		  font-family:  Arial;
+		}
+		ul, li {
+			list-style-type: none;
+		}
+		ul.header li {
+		  display: inline;
+		  list-style-type: none;
+		  margin: 0;
+		}
+		ul.header {
+		  background-color: #111;
+		  padding: 0;
+		}
+		ul.header li a {
+		  color: #FFF;
+		  font-weight: bold;
+		  text-decoration: none;
+		  padding: 20px;
+		  display: inline-block;
+		}
+		.content {
+		  background-color: #FFF;
+		  padding: 20px;
+		}
+		.content h2 {
+		  padding: 0;
+		  margin: 0;
+		}
+		.content li {
+		  margin-bottom: 10px;
+		}
+		.active {
+		  background-color: #0099FF;
+		}
+		    
+
+    </style>
+</head>
+
+<body>
+		<div class="app"></div>
+		<script type="text/babel">
+		//path 属性指定要匹配的 URL
+		//component 属性用来指定要显示的组件的名称
+			var  {
+				Router,
+				Route,
+				IndexRoute,
+				IndexLink,
+				Link
+			} = ReactRouter;
+			var app = document.querySelector('.app');
+			var Home = React.createClass({
+				render:function(){
+					 return (
+					 			<div>
+					 					This is home!
+					 			</div>
+					 	);
+				}
+			});
+
+			var Today = React.createClass({
+				render:function(){
+					return (
+						<div>	This is today!
+								{this.props.children}
+						</div>
+						);
+				}
+			}); 
+
+			var Conent = React.createClass({
+				render:function() {
+					return (
+						<div>	This is conent!</div>
+						)
+				}
+			});
+
+			var Child = React.createClass({
+				render:function() {
+					return (
+								<div>	This is a child!</div>						
+						);
+				}
+			});
+
+			var App = React.createClass({
+					render:function(){
+							return (
+									<div>
+											<h1>	Simple SPA </h1>
+											<ul className="header">	
+											<li><IndexLink to="/" activeClassName="active"><p>HOME</p></IndexLink></li>
+											<li><Link to="/today" activeClassName="active"><p>TODAY</p></Link></li>
+											<li><Link to="/conent" activeClassName="active"><p>CONENT</p></Link></li>
+											</ul>	
+											<div className="content">	
+													{this.props.children}
+											</div>
+									</div>
+							);
+					}
+			});
+			ReactDOM.render(
+				<Router>
+					<Route path="/" component={App}>
+						<IndexRoute component = {Home} />
+						<Route path="today" component={Today}>
+								<Router path="child" component={Child}/>
+						</Route>
+						<Route path="conent" component= {Conent}/>
+					</Route>
+				</Router>,
+				app
+			);
+		</script>
+           
+</body>
+
+</html>
