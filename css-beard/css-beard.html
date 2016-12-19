@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css-beard</title>
+    <style>
+    :root {
+        --color: #000;
+    }
+    
+    .css-beard {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        position: absolute;
+        left: 100px;
+        box-shadow: 150px 240px 0 0 var(--color), 300px 240px 0 0 var(--color);
+    }
+    
+    .css-beard:before {
+        width: 210px;
+        height: 120px;
+        left: 30px;
+        top: 120px;
+        content: "";
+        position: absolute;
+        border-bottom: 180px solid var(--color);
+        border-radius: 0 0 0 100%;
+        transform: rotate(-40deg);
+        transform-origin: right  210px;
+    }
+
+    .css-beard:after {
+        width: 210px;
+        height: 120px;
+        left: 390px;
+        top: 120px;
+        content: "";
+        position: absolute;
+        border-bottom: 180px solid var(--color);
+        border-radius: 0 0 100% 0 ;
+        transform: rotate(40deg);
+        transform-origin: left 210px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="css-beard"></div>
+</body>
+
+</html>
