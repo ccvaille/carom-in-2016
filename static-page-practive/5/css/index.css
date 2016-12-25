@@ -1,0 +1,202 @@
+/*reset*/
+* {
+  font: 12px "Microsoft YaHei", "宋体", "Arial Narrow", HELVETICA;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font: 14px Arial, "Microsoft yahei";
+  background: #fff;
+  margin: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+input[type="text"] {
+  font-family: Arial, "Microsoft YaHei";
+  border: none;
+  height: auto;
+  line-height: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: inline-block;
+  border: 0;
+  vertical-align: middle;
+}
+/*清除文本框后关闭按钮*/
+input::-ms-clear {
+  display: none;
+}
+/*清除密码框后有小眼睛图标*/
+input::-ms-reveal {
+  display: none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/*common*/
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+/*banner*/
+.banner {
+  width: 100%;
+  height: 690px;
+  background-size: 100%;
+}
+/*head*/
+.head {
+  color: #2a2a2a;
+  background: #ffde39;
+}
+.head .title {
+  text-align: left;
+  font-size: 22px;
+  padding-bottom: 25px;
+}
+.head .text {
+  text-align: left;
+  text-indent: 40px;
+  padding-bottom: 53px;
+  font-size: 20px;
+}
+.head .text i {
+  font-style: normal;
+  color: #c31009;
+  font-size: 24px;
+}
+.head .link-to {
+  padding: 50px 0;
+}
+.head .link-to strong {
+  color: #c31009;
+  font-size: 26px;
+}
+.head .link-to strong i {
+  font-size: 32px;
+}
+.head a {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  background: #c31009;
+  line-height: 64px;
+  height: 64px;
+  font-size: 36px;
+  color: #fdfbfb;
+  position: relative;
+  margin-bottom: 25px;
+}
+.head a:after,
+.head a:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 15px solid #880601;
+  border-bottom: 10px solid #880601;
+}
+.head a:after {
+  right: 0;
+  bottom: -20px;
+  border-left: 15px solid #880601;
+  border-top: 10px solid #880601;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.head a:before {
+  left: 0;
+  top: -20px;
+}
+.head .exchange {
+  color: #c31009;
+  font-size: 26px;
+  padding-bottom: 50px;
+}
+.head .exchange span {
+  display: block;
+  font-size: 20px;
+  color: #2a2a2a;
+}
+/*step*/
+.step {
+  background: #fbe883;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.step h4 {
+  color: #c31009;
+  font-size: 24px;
+}
+.step cite {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+}
+.step ul li {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #fbe883;
+  border: 40px solid #c31009;
+  padding-top: 13px;
+  margin-bottom: 13px;
+}
+.step ul li i {
+  font-size: 20px;
+  display: block;
+  line-height: 20px;
+}
+/*footer*/
+.footer {
+  background: #ffde39;
+  padding: 40px 0 60px 0;
+  text-align: center;
+}
+.footer p {
+  color: #c31009;
+  font-size: 24px;
+  line-height: 45px;
+}
+.footer p:nth-child(2) {
+  padding-bottom: 50px;
+}
+.footer p img {
+  margin-top: -5px;
+  vertical-align: bottom;
+}

@@ -1,0 +1,234 @@
+/*reset*/
+
+* {
+    font: 12px "Microsoft YaHei", "宋体", "Arial Narrow", HELVETICA;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font: 14px Arial, "Microsoft yahei";
+    background: #fff;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+input[type="text"] {
+    font-family: Arial, "Microsoft YaHei";
+    border: none;
+    height: auto;
+    line-height: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: inline-block;
+    border: 0;
+    vertical-align: middle;
+}
+
+
+/*清除文本框后关闭按钮*/
+
+input::-ms-clear {
+    display: none;
+}
+
+
+/*清除密码框后有小眼睛图标*/
+
+input::-ms-reveal {
+    display: none;
+}
+
+.clearfix {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+
+/*common*/
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/*banner*/
+
+.banner {
+    width: 100%;
+    height: 690px;
+    background-size: 100%;
+}
+
+
+/*head*/
+
+.head {
+    color: #2a2a2a;
+    background: #ffde39;
+    .title {
+        text-align: left;
+        font-size: 22px;
+        padding-bottom: 25px;
+    }
+    .text {
+        text-align: left;
+        text-indent: 40px;
+        padding-bottom: 53px;
+        font-size: 20px;
+        i {
+            font-style: normal;
+            color: #c31009;
+            font-size: 24px;
+        }
+    }
+    .link-to {
+        padding: 50px 0;
+        strong {
+            color: #c31009;
+            font-size: 26px;
+            i {
+                font-size: 32px;
+            }
+        }
+    }
+    a {
+        display: block;
+        width: 220px;
+        margin: 0 auto;
+        text-align: center;
+        background: #c31009;
+        line-height: 64px;
+        height: 64px;
+        font-size: 36px;
+        color: #fdfbfb;
+        position: relative;
+        margin-bottom: 25px;
+        &:after,
+        &:before {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-top: 10px solid transparent;
+            border-right: 15px solid #880601;
+            border-bottom: 10px solid #880601;
+        }
+        &:after {
+            right: 0;
+            bottom: -20px;
+            border-left: 15px solid #880601;
+            border-top: 10px solid #880601;
+            border-right: 15px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        &:before {
+            left: 0;
+            top: -20px;
+        }
+    }
+    .exchange {
+        color: #c31009;
+        font-size: 26px;
+        padding-bottom: 50px;
+        span {
+            display: block;
+            font-size: 20px;
+            color: #2a2a2a;
+        }
+    }
+}
+
+
+/*step*/
+
+.step {
+    background: #fbe883;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    h4 {
+        color: #c31009;
+        font-size: 24px;
+    }
+    cite {
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    ul {
+        li {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background: #fbe883;
+            border: 40px solid #c31009;
+            padding-top: 13px;
+            margin-bottom: 13px;
+            i {
+                font-size: 20px;
+                display: block;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+
+/*footer*/
+
+.footer {
+    background: #ffde39;
+    padding: 40px 0 60px 0;
+    text-align: center;
+    p {
+        color: #c31009;
+        font-size: 24px;
+        line-height: 45px;
+        &:nth-child(2) {
+            padding-bottom: 50px;
+        }
+        img {
+            margin-top: -5px;
+            vertical-align: bottom;
+        }
+    }
+}
